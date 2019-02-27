@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#menu {
+			border: 1px solid #000000;
+		}
+		
+		#types {
+			display: none;
+		}
+		
+		.current {
+			background-color: green;
+			font-size: 16px;
+			font-weight: blod;
+			color: white;
+		}
+	</style>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#type").click(function() {
+				var types = $("#types");
+				if(types.css("display") == "none") {
+					types.css("display", "block")
+				} else {
+					types.css("display", "none")
+				}
+			})
+
+			$("ul li").click(function() {
+				$("li").removeClass();
+				$(this).addClass("current")
+			})
+
+		})
+	</script>
+
+	<body>
+		<div id="menu">
+			<div>
+				<h4 id="type">jQuery 分类</h4>
+			</div>
+			<div id="types">
+				<ul>
+					<li>
+						<a href="#">jQuery 对象</a>
+					</li>
+					<li>
+						<a href="#">jQuery 方法</a>
+					</li>
+					<li>
+						<a href="#">jQuery 事件</a>
+					</li>
+					<li>
+						<a href="#">jQuery 效果</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
