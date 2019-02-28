@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootsrap.css" />
+	</head>
+
+	<body>
+		<div class="bs-docs-section clearfix">
+			<div class="row">
+				<div class="col-lg-10 offset-1">
+					<div class="page-header">
+						<h1 id="navbars">BookStore</h1>
+					</div>
+
+					<div class="bs-component">
+						<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+							<a class="navbar-brand" href="#">主页</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+							<div class="collapse navbar-collapse" id="navbarColor01">
+								<ul class="navbar-nav mr-auto">
+									<li class="nav-item active">
+										<a class="nav-link" href="#">文学 <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">科学</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">军事</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">教育</a>
+									</li>
+								</ul>
+								<form class="form-inline my-2 my-lg-0">
+									<input class="form-control mr-sm-2" type="text" placeholder="Search">
+									<button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>
+								</form>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-lg-10 offset-1">
+				<div class="panel panel-default">
+					<ol class="breadcrumb">
+						<li>
+							<a href="${pageContext.request.contextPath}/">首页</a>
+						</li>
+						<li>
+							/
+							<a>购物车</a>
+						</li>
+					</ol>
+					<div class="panel-body">
+						<form action="${pageContext.request.contextPath}/order/save.do" method="post">
+							<table class="table table-striped table-bordered">
+								<tr>
+									<th>商品名称</th>
+									<th>商品单价</th>
+									<th>金额</th>
+									<th>购买数量</th>
+									<th>操作</th>
+								</tr>
+								<c:forEach items="${shoppingCart.shoppingCartItems }" var="shoppingCartItem">
+									<tr class="bookTr">
+										<td class="thumb"><img class="imgs" src="img/aa.jpg" />
+											<a href="book_showProduct.action?bookId=${shoppingCartItem.book.id }" target="_blank">追风筝的人</a>
+										</td>
+										<td class="price" width="120" style="text-align: center; vertical-align: middle;"><span>￥<label
+										class="price_" id="price_${shoppingCartItem.book.id }">100</label></span>
+										</td>
+										<td class="price" width="120" style="text-align: center; vertical-align: middle;"><span>￥<label
+										id="bookItem_total_${shoppingCartItem.book.id }">100</label></span>
+										</td>
+										<td class="number" width="120" style="text-align: center; vertical-align: middle;"><input type="hidden" id="book_id" value="${shoppingCartItem.book.id }" />
+											<input class="min" name="" type="button" value=" - " /> <input class="text_box" style="width: 30px; text-align: center" name="" type="text" value="${shoppingCartItem.count }" /> <input class="add" name="" type="button" value=" + " /></td>
+										<td class="delete" style="text-align: center; vertical-align: middle;">
+											<a href="javascript:removeShopping(${shoppingCartItem.book.id })">删除</a>
+										</td>
+									</tr>
+								</c:forEach>
+							</table>
+							<button type="submit" class="btn btn-danger btn-lg pull-right">
+						<i class="glyphicon glyphicon-play"></i>&nbsp;&nbsp;结&nbsp;&nbsp;算
+					</button>
+						</form>
+					</div>
+					<div class="shopping_list_end">
+
+						<ul>
+							<li class="shopping_list_end_2">￥<label id="book_total"></label>
+							</li>
+							<li class="shopping_list_end_3">商品金额总计：</li>
+						</ul>
+					</div>
+
+					<div style="background-color: #cddbb8; margin-top: 10px; font-size: 20px; height: 40px; text-align: center">
+						<div style="padding: 5px;">
+							<b>个人信息</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>收件人：</b>${currentUser.trueName }&nbsp;&nbsp;<b>收获地址：</b>${currentUser.address }&nbsp;&nbsp;<b>联系电话：</b>${currentUser.mobile }
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-lg-6 offset-5">
+				<span class="text-center">Copyright &copy; 2018 XXXX All Rights Reserved.</span>
+			</div>
+		</div>
+	</body>
+
+</html>

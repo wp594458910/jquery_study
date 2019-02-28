@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootsrap.css" />
+		<style>
+			.thumbnail a img {
+				height: 160px;
+			}
+			
+			.thumbnail .caption {
+				text-align: center;
+				height: 85px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bs-docs-section clearfix">
+			<div class="row">
+				<div class="col-lg-10 offset-1">
+					<div class="page-header">
+						<h1 id="navbars">BookStore</h1>
+					</div>
+
+					<div class="bs-component">
+						<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+							<a class="navbar-brand" href="#">主页</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+							<div class="collapse navbar-collapse" id="navbarColor01">
+								<ul class="navbar-nav mr-auto">
+									<li class="nav-item active">
+										<a class="nav-link" href="#">文学 <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">科学</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">军事</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">教育</a>
+									</li>
+								</ul>
+								<form class="form-inline my-2 my-lg-0">
+									<input class="form-control mr-sm-2" type="text" placeholder="Search">
+									<button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>
+								</form>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bs-docs-section">
+
+			<div class="row">
+				<div class="col-lg-7 offset-1">
+					<div class="page-header">
+						<h3 class="panel-title"></h3>
+					</div>
+					<div class="bs-component">
+						<div class="jumbotron">
+							<h1 class="display-3">Welcom guys.</h1>
+							<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+							<hr class="my-4">
+							<p class="lead">
+								<a class="btn btn-primary btn-lg" href="#" role="button">所有图书</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 my-col-right">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">热门书籍</h3>
+						</div>
+						<!-- <div class="panel-body"> -->
+						<ul class="list-group text-center">
+							<li class="list-group-item">
+								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
+							</li>
+							<li class="list-group-item">
+								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
+							</li>
+							<li class="list-group-item">
+								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
+							</li>
+							<li class="list-group-item">
+								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
+							</li>
+							<li class="list-group-item">
+								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
+							</li>
+							<li class="list-group-item">
+								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
+							</li>
+							<li class="list-group-item">
+								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
+							</li>
+						</ul>
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-1">
+					<div class="bs-component">
+						<div class="card border-primary">
+							<div class="card-header">文学 &nbsp;&nbsp;&nbsp;
+								<a href="#"><span class="label label-default text-right">小分类</span></a>&nbsp;
+								<a href="#"><span class="label label-default text-right">小分类</span></a>
+							</div>
+
+							<div class="card-body">
+								<div class="row">
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-lg-10 offset-1">
+					<div class="bs-component">
+						<div class="card border-primary">
+							<div class="card-header">文学 &nbsp;&nbsp;&nbsp;
+								<a href="#"><span class="label label-default text-right">小分类</span></a>&nbsp;
+								<a href="#"><span class="label label-default text-right">小分类</span></a>
+							</div>
+
+							<div class="card-body">
+								<div class="row">
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="thumbnail">
+											<a href="#"><img src="img/aa.jpg" alt="${book.name }"></a>
+											<div class="caption">
+												<h5>追风筝的人</h5>
+												<p>作者：东野圭吾</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
+			<div class="row">
+				<div class="col-lg-6 offset-5">
+					<span class="text-center">Copyright &copy; 2018 XXXX All Rights Reserved.</span>
+				</div>
+			</div>
+	</body>
+
+</html>

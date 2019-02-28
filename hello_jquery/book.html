@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootsrap.css" />
+	</head>
+
+	<body>
+		<div class="bs-docs-section clearfix">
+			<div class="row">
+				<div class="col-lg-10 offset-1">
+					<div class="page-header">
+						<h1 id="navbars">BookStore</h1>
+					</div>
+
+					<div class="bs-component">
+						<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+							<a class="navbar-brand" href="#">主页</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+							<div class="collapse navbar-collapse" id="navbarColor01">
+								<ul class="navbar-nav mr-auto">
+									<li class="nav-item active">
+										<a class="nav-link" href="#">文学 <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">科学</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">军事</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">教育</a>
+									</li>
+								</ul>
+								<form class="form-inline my-2 my-lg-0">
+									<input class="form-control mr-sm-2" type="text" placeholder="Search">
+									<button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>
+								</form>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-lg-4 offset-1">
+				<img src="img/aa.jpg" alt="${book.pic}" class="img-thumbnail img-detail">
+			</div>
+			<div class="col-lg-6">
+				<div class="row">
+					<h2>穿透烟雾的记忆</h2>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6 message">作者： [以]阿哈龙·阿佩尔菲尔德</div>
+					<div class="col-md-6 message">ISBN：9787020139163</div>
+					<div class="col-md-6 message">出版社：人民文学出版社</div>
+					<div class="col-md-6 message">
+						出版时间： 2018-05
+					</div>
+					<div class="col-md-6 message">开本：32开</div>
+					<div class="col-md-6 message">页数：450</div>
+					<div class="col-md-6 message">字数：50000</div>
+					<div class="col-md-6 message">库存：50</div>
+					<div class="col-md-6 message">
+						价格：<span class="price">￥100</span>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<button type="button" class="btn btn-danger btn-lg glyphicon glyphicon-yen" onclick="goBuy(${book.id })">购买</button>
+					<button type="button" class="btn btn-warning btn-lg glyphicon glyphicon-shopping-cart" onclick="addShoppingCart(${book.id })">放入购物车</button>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-lg-10 offset-1">
+				<div class="page-header">
+					<h2>简介</h2>
+				</div>
+				<div style="padding: 0 20px 0 20px;">《穿透烟雾的记忆》是阿哈龙•阿佩尔菲尔德的自传体小说。 主人公“我”1932年出生于犹太中产阶级的家庭，“二战”爆发时居住于罗马尼亚。“我”目睹了母亲的遇害，之后与父亲走散，在贫民区度过了一段日子，又在被押往集中营的途中颠沛流离长达两个月。在出逃后，“我”在乌克兰的森林里度过了两年的时光，此后南下意大利，*终来到以色列，在那里重新寻回平静、获得自由。 这位备受称誉的犹太作家将童年及青年时代那不同寻常的痛苦回忆以小说的形式记录下来，以动人心弦的笔触描述了他如何在充满敌意的世界里由少年步入了成人时代。
+				</div>
+				<br />
+				<div class="page-header">
+					<h2>目录</h2>
+				</div>
+				<div style="padding: 0 20px 0 20px;">${book.mulu }</div>
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-lg-6 offset-5">
+				<span class="text-center">Copyright &copy; 2018 XXXX All Rights Reserved.</span>
+			</div>
+		</div>
+	</body>
+
+</html>
