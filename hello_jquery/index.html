@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="css/bootsrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
 		<style>
 			.thumbnail a img {
 				height: 160px;
@@ -13,6 +14,44 @@
 			.thumbnail .caption {
 				text-align: center;
 				height: 85px;
+			}
+			
+			html,
+			body {
+				position: relative;
+				height: 100%;
+			}
+			
+			body {
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				/* Center slide text vertically */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
 			}
 		</style>
 	</head>
@@ -57,33 +96,33 @@
 				</div>
 			</div>
 		</div>
-
+		<br />
 		<div class="bs-docs-section">
 
 			<div class="row">
-				<div class="col-lg-7 offset-1">
-					<div class="page-header">
-						<h3 class="panel-title"></h3>
-					</div>
-					<div class="bs-component">
-						<div class="jumbotron">
-							<h1 class="display-3">Welcom guys.</h1>
-							<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-							<hr class="my-4">
-							<p class="lead">
-								<a class="btn btn-primary btn-lg" href="#" role="button">所有图书</a>
-							</p>
+				<div class="col-lg-8 offset-1">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="img/1.jpg"></div>
+							<div class="swiper-slide"><img src="img/2.jpg"></div>
+							<div class="swiper-slide"><img src="img/3.jpg"></div>
+							<div class="swiper-slide"><img src="img/4.jpg"></div>
 						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
 					</div>
 				</div>
 
-				<div class="col-md-3 my-col-right">
+				<div class="col-md-2 my-col-right">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">热门书籍</h3>
 						</div>
 						<!-- <div class="panel-body"> -->
-						<ul class="list-group text-center">
+						<ul class="list-group">
 							<li class="list-group-item">
 								<a href="${pageContext.request.contextPath}/book/${book.id}.html">追风筝的人</a>
 							</li>
@@ -110,6 +149,7 @@
 					</div>
 				</div>
 			</div>
+			<br />
 			<div class="row">
 				<div class="col-lg-10 offset-1">
 					<div class="bs-component">
@@ -260,6 +300,19 @@
 					<span class="text-center">Copyright &copy; 2018 XXXX All Rights Reserved.</span>
 				</div>
 			</div>
+			<script type="text/javascript" src="js/swiper.min.js" ></script>
+			<script>
+				var swiper = new Swiper('.swiper-container', {
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'fraction',
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+				});
+			</script>
 	</body>
 
 </html>
